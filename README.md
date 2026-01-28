@@ -1,59 +1,287 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# FoxesSMS
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Overview
 
-## About Laravel
+**FoxesSMS** is a powerful and scalable **SaaS platform** that allows users to **purchase virtual phone numbers from multiple countries** and use them as personal SIM numbers for receiving SMS and verification codes.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+The platform is designed for both **end-users** and **developers**:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- Individuals can buy and manage virtual numbers directly from the dashboard.
+- Developers and businesses can integrate FoxesSMS via a **public API** to build their own SaaS products, automation tools, or verification systems.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+FoxesSMS focuses on **reliability, security, scalability, and API-first architecture**, following real-world SaaS and enterprise development practices.
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## Key Features
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Virtual Phone Numbers
 
-## Laravel Sponsors
+- Purchase virtual phone numbers from multiple countries:
+    - United Kingdom (UK)
+    - United States (USA)
+    - United Arab Emirates (UAE)
+    - France
+    - Germany
+    - Brazil
+    - China
+    - And more
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- Use virtual numbers as personal SIM cards
+- Receive SMS in real time
+- Number lifecycle management (active, expired, released)
 
-### Premium Partners
+### User Management
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+- Secure user authentication
+- User profile & account management
+- Balance & credit management
+- Usage history and logs
 
-## Contributing
+### Payments & Billing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- Online payments integration
+- Wallet / balance-based billing system
+- Transaction history
+- Automated billing for number purchases
 
-## Code of Conduct
+### API Platform (Core SaaS Feature)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- Public REST API for developers
+- API key management
+- Endpoints to:
+    - Purchase virtual numbers
+    - Receive SMS messages
+    - Manage numbers programmatically
 
-## Security Vulnerabilities
+- Designed for building third-party SaaS products
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Admin & Monitoring
+
+- Admin dashboard for system monitoring
+- User & transaction management
+- Number provider management
+- Logs & activity tracking
+
+---
+
+## Tech Stack
+
+### Backend / Full-stack Framework
+
+- **Laravel** (PHP)
+- **Inertia.js**
+
+### Frontend
+
+- **React.js**
+- **Tailwind CSS**
+
+### APIs & Integrations
+
+- Virtual number provider APIs
+- FoxesSMS Public API (resold & exposed to clients)
+
+### Security & Services
+
+- API key authentication
+- Rate limiting
+- Secure payment handling
+
+### Database
+
+- **MySQL** (or any Laravel-supported database)
+
+### Tooling
+
+- Vite
+- Axios
+- Composer
+- npm / Yarn
+
+---
+
+## Screenshots
+
+> Application screenshots and API usage previews will be added here.
+
+```
+📸 User dashboard
+📸 Virtual number purchase flow
+📸 SMS inbox
+📸 API keys management
+📸 Admin monitoring panel
+```
+
+---
+
+## Installation Guide
+
+### Requirements
+
+- PHP >= 8.1
+- Composer
+- Node.js & npm (or Yarn)
+- MySQL (or compatible DB)
+
+---
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/foxessms.git
+cd foxessms
+```
+
+---
+
+### 2. Install backend dependencies
+
+```bash
+composer install
+```
+
+---
+
+### 3. Install frontend dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+
+---
+
+### 4. Environment configuration
+
+Copy the environment file:
+
+```bash
+cp .env.example .env
+```
+
+Configure the following in `.env`:
+
+- Database credentials
+- Payment gateway keys
+- Virtual number provider API credentials
+- FoxesSMS API settings
+
+Generate the application key:
+
+```bash
+php artisan key:generate
+```
+
+---
+
+### 5. Run migrations
+
+```bash
+php artisan migrate
+```
+
+---
+
+### 6. Seed the database (optional)
+
+```bash
+php artisan db:seed
+```
+
+To run a specific seeder:
+
+```bash
+php artisan db:seed --class=SeederName
+```
+
+---
+
+### 7. Using factories (optional)
+
+```bash
+php artisan tinker
+```
+
+```php
+\App\Models\VirtualNumber::factory()->count(10)->create();
+```
+
+---
+
+### 8. Start the development servers
+
+Backend (Laravel):
+
+```bash
+php artisan serve
+```
+
+Frontend (Vite / React):
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+---
+
+## API Documentation (Overview)
+
+FoxesSMS provides a **developer-friendly REST API**.
+
+Key concepts:
+
+- API Key authentication
+- JSON-based responses
+- Rate limiting
+
+Example use cases:
+
+- Build your own SMS verification SaaS
+- Automate account verification workflows
+- Integrate virtual numbers into third-party platforms
+
+> Full API documentation can be provided separately.
+
+---
+
+## Architecture Highlights
+
+- API-first SaaS architecture
+- Scalable service-based backend
+- Secure billing & credit system
+- Clean separation between user, admin, and API layers
+
+This project demonstrates **real SaaS product design**, not just a demo application.
+
+---
+
+## Future Improvements
+
+- Webhooks for SMS events
+- Advanced analytics & usage reports
+- Subscription plans
+- Multi-currency billing
+
+---
+
+## Contribution
+
+Contributions are welcome.
+
+- Fork the repository
+- Create a feature branch
+- Submit a pull request
+
+---
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is intended for portfolio and demonstration purposes.
+
+---
+
+© 2026 – FoxesSMS
